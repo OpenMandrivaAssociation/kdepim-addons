@@ -64,7 +64,7 @@ BuildRequires:	cmake(KF5Tnef)
 BuildRequires:	pkgconfig(shared-mime-info)
 
 %description
-Add-Ons for the KDE PIM suite
+Add-Ons for the KDE PIM suite.
 
 %files
 %config %{_sysconfdir}/xdg/kdepim-addons.categories
@@ -75,50 +75,25 @@ Add-Ons for the KDE PIM suite
 %{_bindir}/kmail_fprot.sh
 %{_bindir}/kmail_sav.sh
 %{_libdir}/akonadi/contact/editorpageplugins/cryptopageplugin.so
+# (tpg) these libs should be splitted into separate subpackages ?
 %{_libdir}/libkaddressbookmergelibprivate.so.5*
 %{_libdir}/libshorturlpluginprivate.so.5*
-%{_libdir}/qt5/plugins/kaddressbook/kaddressbook_checkgravatarplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/kaddressbook_mergecontactsplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/kaddressbook_searchduplicatesplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/kaddressbook_sendmailplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/kaddressbook_sendvcardsplugin.so
-%{_libdir}/qt5/plugins/kmail/kmail_antispamplugin.so
-%{_libdir}/qt5/plugins/kmail/kmail_antivirusplugin.so
-%{_libdir}/qt5/plugins/kmail/kmail_changecaseeditorplugin.so
-%{_libdir}/qt5/plugins/kmail/kmail_insertspecialcharactereditorplugin.so
-%{_libdir}/qt5/plugins/kmail/kmail_zoomtexteditorplugin.so
+%{_libdir}/libadblocklibprivate.so.5*
+%{_libdir}/qt5/plugins/kaddressbook/*.so
+%{_libdir}/qt5/plugins/kmail/*.so
 %{_libdir}/qt5/plugins/korg_datenums.so
 %{_libdir}/qt5/plugins/korg_hebrew.so
 %{_libdir}/qt5/plugins/korg_picoftheday.so
 %{_libdir}/qt5/plugins/korg_thisdayinhistory.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_allheaderstyleplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_briefheaderstyleplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_createeventplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_createnoteplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_createtodoplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_defaultgrantleeheaderstyleplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_enterpriseheaderstyleplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_expandurlplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_fancyheaderstyleplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_grantleeheaderstyleplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_longheaderstyleplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_standardsheaderstyleplugin.so
-%{_libdir}/qt5/plugins/messageviewer/messageviewer_translatorplugin.so
+%{_libdir}/qt5/plugins/messageviewer/*.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_mstnef.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_vcard.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_xdiff.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_boxplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_dropboxplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_gdriveplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_hubicplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_isgdshorturlengineplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_shorturlplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_tinyurlengineplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_translatorplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_triopabshorturlengineplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_ur1cashorturlengineplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_webdavplugin.so
-%{_libdir}/qt5/plugins/pimcommon/pimcommon_yousenditplugin.so
+%{_libdir}/qt5/plugins/pimcommon/*.so
+%{_libdir}/qt5/plugins/plasmacalendarplugins/*.so
+%{_libdir}/qt5/plugins/webengineviewer/*.so
+%{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
+%{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
 %{_datadir}/kmail2/pics/*
 %{_datadir}/kservices5/korganizer/datenums.desktop
 %{_datadir}/kservices5/korganizer/hebrew.desktop
@@ -126,6 +101,7 @@ Add-Ons for the KDE PIM suite
 %{_datadir}/kservices5/korganizer/thisdayinhistory.desktop
 %{_datadir}/messageviewer/defaultthemes/*/*
 %{_datadir}/messageviewer/plugins/bodypartformatter/*.desktop
+%{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
 
 %prep
 %setup -q
