@@ -15,6 +15,7 @@ Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
 BuildRequires:	sasl-devel
+BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
@@ -41,6 +42,7 @@ BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5KHtml)
 BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5DBusAddons)
+BuildRequires:	cmake(KF5Akonadi)
 BuildRequires:	cmake(KF5AkonadiNotes)
 BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	cmake(KF5MailCommon)
