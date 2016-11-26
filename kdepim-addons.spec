@@ -87,10 +87,12 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt5/plugins/korg_thisdayinhistory.so
 %{_libdir}/qt5/plugins/messageviewer/*.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_mstnef.so
+%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_calendar.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_vcard.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_xdiff.so
 %{_libdir}/qt5/plugins/pimcommon/*.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/*.so
+%{_libdir}/qt5/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
 %{_libdir}/qt5/plugins/webengineviewer/*.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
