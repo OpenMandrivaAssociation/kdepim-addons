@@ -62,7 +62,7 @@ BuildRequires:	cmake(KF5Akonadi)
 BuildRequires:	cmake(KF5Gravatar)
 BuildRequires:	cmake(KF5Tnef)
 BuildRequires:	pkgconfig(shared-mime-info)
-Conflicts:	kmail <= 16.04.3-2
+Conflicts:	kmail <= 3:16.04.3-2
 
 %description
 Add-Ons for the KDE PIM suite.
