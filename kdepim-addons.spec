@@ -1,7 +1,7 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
 Version:	16.08.3
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -62,6 +62,7 @@ BuildRequires:	cmake(KF5Akonadi)
 BuildRequires:	cmake(KF5Gravatar)
 BuildRequires:	cmake(KF5Tnef)
 BuildRequires:	pkgconfig(shared-mime-info)
+Conflicts:	kmail <= 16.04.3-2
 
 %description
 Add-Ons for the KDE PIM suite.
