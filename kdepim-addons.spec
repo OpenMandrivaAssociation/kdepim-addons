@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	16.12.1
+Version:	16.12.2
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -69,6 +69,7 @@ Add-Ons for the KDE PIM suite.
 
 %files
 %config %{_sysconfdir}/xdg/kdepim-addons.categories
+%config %{_sysconfdir}/xdg/kdepim-addons.renamecategories
 %config %{_sysconfdir}/xdg/kmail.antispamrc
 %config %{_sysconfdir}/xdg/kmail.antivirusrc
 %{_bindir}/kmail_antivir.sh
@@ -79,6 +80,7 @@ Add-Ons for the KDE PIM suite.
 # (tpg) these libs should be splitted into separate subpackages ?
 %{_libdir}/libkaddressbookmergelibprivate.so.5*
 %{_libdir}/libshorturlpluginprivate.so.5*
+%{_libdir}/libkaddressbookimportexportlibprivate.so.5*
 %{_libdir}/libadblocklibprivate.so.5*
 %{_libdir}/qt5/plugins/kaddressbook/*.so
 %{_libdir}/qt5/plugins/kmail/*.so
@@ -95,6 +97,7 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt5/plugins/plasmacalendarplugins/*.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
 %{_libdir}/qt5/plugins/webengineviewer/*.so
+%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_gnupgwks.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
 %{_datadir}/kmail2/pics/*
@@ -102,7 +105,6 @@ Add-Ons for the KDE PIM suite.
 %{_datadir}/kservices5/korganizer/hebrew.desktop
 %{_datadir}/kservices5/korganizer/picoftheday.desktop
 %{_datadir}/kservices5/korganizer/thisdayinhistory.desktop
-%{_datadir}/messageviewer/defaultthemes/*/*
 %{_datadir}/messageviewer/plugins/bodypartformatter/*.desktop
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
 
