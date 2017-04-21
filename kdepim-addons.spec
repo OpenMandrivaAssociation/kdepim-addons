@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -67,7 +67,7 @@ Conflicts:	kmail <= 3:16.04.3-2
 %description
 Add-Ons for the KDE PIM suite.
 
-%files
+%files -f all.lang
 %config %{_sysconfdir}/xdg/kdepim-addons.categories
 %config %{_sysconfdir}/xdg/kdepim-addons.renamecategories
 %config %{_sysconfdir}/xdg/kmail.antispamrc
@@ -88,6 +88,7 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt5/plugins/korg_hebrew.so
 %{_libdir}/qt5/plugins/korg_picoftheday.so
 %{_libdir}/qt5/plugins/korg_thisdayinhistory.so
+%{_libdir}/qt5/plugins/libksieve/imapfoldercompletionplugin.so
 %{_libdir}/qt5/plugins/messageviewer/*.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_mstnef.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_calendar.so
@@ -117,3 +118,21 @@ Add-Ons for the KDE PIM suite.
 
 %install
 %ninja_install -C build
+%find_lang cryptopageplugin
+%find_lang customtoolsplugin
+%find_lang kaddressbook_importexportplugins
+%find_lang kaddressbook_plugins
+%find_lang kmail_editor_plugins
+%find_lang kmail_editorsendcheck_plugins
+%find_lang kmail_plugins
+%find_lang korganizer_plugins
+%find_lang mailreader
+%find_lang messageviewer_application_gnupgwks_plugin
+%find_lang messageviewer_application_mstnef_plugin
+%find_lang messageviewer_text_calendar_plugin
+%find_lang messageviewer_text_vcard_plugin
+%find_lang messageviewerheaderplugins
+%find_lang messageviewerplugins
+%find_lang sieveeditor_plugins
+%find_lang webengineurlinterceptor
+cat *.lang >all.lang
