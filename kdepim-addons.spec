@@ -61,6 +61,7 @@ BuildRequires:	cmake(KF5EventViews)
 BuildRequires:	cmake(KF5Akonadi)
 BuildRequires:	cmake(KF5Gravatar)
 BuildRequires:	cmake(KF5Tnef)
+BuildRequires:	cmake(KF5LibKSieve)
 BuildRequires:	pkgconfig(shared-mime-info)
 Conflicts:	kmail <= 3:16.04.3-2
 
