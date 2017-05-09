@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	17.04.0
+Version:	17.04.1
 Release:	1
 Epoch:		1
 License:	GPLv2+
