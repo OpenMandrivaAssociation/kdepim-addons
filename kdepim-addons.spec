@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	17.04.3
+Version:	17.07.90
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -68,7 +68,7 @@ Conflicts:	kmail <= 3:16.04.3-2
 %description
 Add-Ons for the KDE PIM suite.
 
-%files -f all.lang
+%files -f %{name}.lang
 %config %{_sysconfdir}/xdg/kdepim-addons.categories
 %config %{_sysconfdir}/xdg/kdepim-addons.renamecategories
 %config %{_sysconfdir}/xdg/kmail.antispamrc
@@ -77,19 +77,18 @@ Add-Ons for the KDE PIM suite.
 %{_bindir}/kmail_clamav.sh
 %{_bindir}/kmail_fprot.sh
 %{_bindir}/kmail_sav.sh
-%{_libdir}/akonadi/contact/editorpageplugins/cryptopageplugin.so
 # (tpg) these libs should be splitted into separate subpackages ?
 %{_libdir}/libkaddressbookmergelibprivate.so.5*
 %{_libdir}/libshorturlpluginprivate.so.5*
 %{_libdir}/libkaddressbookimportexportlibprivate.so.5*
 %{_libdir}/libadblocklibprivate.so.5*
+%{_libdir}/contacteditor
 %{_libdir}/qt5/plugins/kaddressbook/*.so
 %{_libdir}/qt5/plugins/kmail/*.so
 %{_libdir}/qt5/plugins/korg_datenums.so
 %{_libdir}/qt5/plugins/korg_hebrew.so
 %{_libdir}/qt5/plugins/korg_picoftheday.so
 %{_libdir}/qt5/plugins/korg_thisdayinhistory.so
-%{_libdir}/qt5/plugins/libksieve/imapfoldercompletionplugin.so
 %{_libdir}/qt5/plugins/messageviewer/*.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_mstnef.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_calendar.so
@@ -100,6 +99,10 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt5/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
 %{_libdir}/qt5/plugins/webengineviewer/*.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_gnupgwks.so
+%{_libdir}/qt5/plugins/importwizard
+%{_libdir}/qt5/plugins/libksieve
+%{_libdir}/qt5/plugins/mailtransport
+%{_libdir}/qt5/plugins/templateparser
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
 %{_datadir}/kmail2/pics/*
@@ -119,21 +122,4 @@ Add-Ons for the KDE PIM suite.
 
 %install
 %ninja_install -C build
-%find_lang cryptopageplugin
-%find_lang customtoolsplugin
-%find_lang kaddressbook_importexportplugins
-%find_lang kaddressbook_plugins
-%find_lang kmail_editor_plugins
-%find_lang kmail_editorsendcheck_plugins
-%find_lang kmail_plugins
-%find_lang korganizer_plugins
-%find_lang mailreader
-%find_lang messageviewer_application_gnupgwks_plugin
-%find_lang messageviewer_application_mstnef_plugin
-%find_lang messageviewer_text_calendar_plugin
-%find_lang messageviewer_text_vcard_plugin
-%find_lang messageviewerheaderplugins
-%find_lang messageviewerplugins
-%find_lang sieveeditor_plugins
-%find_lang webengineurlinterceptor
-cat *.lang >all.lang
+%find_lang %{name} --all-name --with-html
