@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	17.07.90
+Version:	17.08.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -99,7 +99,6 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt5/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
 %{_libdir}/qt5/plugins/webengineviewer/*.so
 %{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_gnupgwks.so
-%{_libdir}/qt5/plugins/importwizard
 %{_libdir}/qt5/plugins/libksieve
 %{_libdir}/qt5/plugins/mailtransport
 %{_libdir}/qt5/plugins/templateparser
