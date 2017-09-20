@@ -83,7 +83,6 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/libkaddressbookimportexportlibprivate.so.5*
 %{_libdir}/libadblocklibprivate.so.5*
 %{_libdir}/contacteditor
-%{_libdir}/qt5/plugins/importwizard
 %{_libdir}/qt5/plugins/kaddressbook/*.so
 %{_libdir}/qt5/plugins/kmail/*.so
 %{_libdir}/qt5/plugins/korg_datenums.so
