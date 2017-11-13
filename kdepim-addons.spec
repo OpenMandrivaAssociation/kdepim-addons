@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	17.08.1
+Version:	17.08.3
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -78,11 +78,17 @@ Add-Ons for the KDE PIM suite.
 %{_bindir}/kmail_fprot.sh
 %{_bindir}/kmail_sav.sh
 # (tpg) these libs should be splitted into separate subpackages ?
+# (bero) let's not do it until either something else starts using them
+# (which is not going to happen given make install doesn't even install
+# headers...) or they become optional here.
+# No point in splitting a package if both sides are useless without
+# the other...
 %{_libdir}/libkaddressbookmergelibprivate.so.5*
 %{_libdir}/libshorturlpluginprivate.so.5*
 %{_libdir}/libkaddressbookimportexportlibprivate.so.5*
 %{_libdir}/libadblocklibprivate.so.5*
 %{_libdir}/contacteditor
+%{_libdir}/qt5/plugins/importwizard/*.so
 %{_libdir}/qt5/plugins/kaddressbook/*.so
 %{_libdir}/qt5/plugins/kmail/*.so
 %{_libdir}/qt5/plugins/korg_datenums.so
