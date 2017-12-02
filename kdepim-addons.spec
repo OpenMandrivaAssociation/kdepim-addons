@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -37,7 +37,7 @@ BuildRequires:	cmake(KF5Service)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5I18n)
-BuildRequires:	cmake(KF5GAPI)
+BuildRequires:	cmake(KPimGAPI)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5KHtml)
 BuildRequires:	cmake(KF5Config)
@@ -88,35 +88,31 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/libkaddressbookimportexportlibprivate.so.5*
 %{_libdir}/libadblocklibprivate.so.5*
 %{_libdir}/contacteditor
+%{_libdir}/qt5/plugins/contacteditor
 %{_libdir}/qt5/plugins/importwizard/*.so
 %{_libdir}/qt5/plugins/kaddressbook/*.so
 %{_libdir}/qt5/plugins/kmail/*.so
 %{_libdir}/qt5/plugins/korg_datenums.so
-%{_libdir}/qt5/plugins/korg_hebrew.so
 %{_libdir}/qt5/plugins/korg_picoftheday.so
 %{_libdir}/qt5/plugins/korg_thisdayinhistory.so
 %{_libdir}/qt5/plugins/messageviewer/*.so
-%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_mstnef.so
-%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_calendar.so
-%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_vcard.so
-%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_xdiff.so
+%{_libdir}/qt5/plugins/messageviewer/bodypartformatter
 %{_libdir}/qt5/plugins/pimcommon/*.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/*.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
 %{_libdir}/qt5/plugins/webengineviewer/*.so
-%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_gnupgwks.so
 %{_libdir}/qt5/plugins/libksieve
 %{_libdir}/qt5/plugins/mailtransport
 %{_libdir}/qt5/plugins/templateparser
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
+%{_datadir}/contacteditor
 %{_datadir}/kmail2/pics/*
 %{_datadir}/kservices5/korganizer/datenums.desktop
-%{_datadir}/kservices5/korganizer/hebrew.desktop
 %{_datadir}/kservices5/korganizer/picoftheday.desktop
 %{_datadir}/kservices5/korganizer/thisdayinhistory.desktop
-%{_datadir}/messageviewer/plugins/bodypartformatter/*.desktop
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
+%{_datadir}/mime/packages/application-vnd-apple-pkpass.xml
 
 %prep
 %setup -q
