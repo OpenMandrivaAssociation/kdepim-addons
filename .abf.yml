@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kdepim-addons-17.12.1.tar.xz: 18a5a23315f43a350d3366f1884f6ce67452a8d3
+sources:
+  kdepim-addons-17.12.2.tar.xz: c463074c112b6a52764162482cdec00a9a3ac5bd
