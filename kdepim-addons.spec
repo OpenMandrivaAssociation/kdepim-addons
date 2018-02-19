@@ -1,8 +1,8 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	17.04.0
-Release:	2
-Epoch:		1
+Version:	 17.12.2
+Release:	1
+Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
@@ -37,7 +37,7 @@ BuildRequires:	cmake(KF5Service)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5I18n)
-BuildRequires:	cmake(KF5GAPI)
+BuildRequires:	cmake(KPimGAPI)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5KHtml)
 BuildRequires:	cmake(KF5Config)
@@ -68,7 +68,7 @@ Conflicts:	kmail <= 3:16.04.3-2
 %description
 Add-Ons for the KDE PIM suite.
 
-%files -f all.lang
+%files -f %{name}.lang
 %config %{_sysconfdir}/xdg/kdepim-addons.categories
 %config %{_sysconfdir}/xdg/kdepim-addons.renamecategories
 %config %{_sysconfdir}/xdg/kmail.antispamrc
@@ -77,38 +77,42 @@ Add-Ons for the KDE PIM suite.
 %{_bindir}/kmail_clamav.sh
 %{_bindir}/kmail_fprot.sh
 %{_bindir}/kmail_sav.sh
-%{_libdir}/akonadi/contact/editorpageplugins/cryptopageplugin.so
 # (tpg) these libs should be splitted into separate subpackages ?
+# (bero) let's not do it until either something else starts using them
+# (which is not going to happen given make install doesn't even install
+# headers...) or they become optional here.
+# No point in splitting a package if both sides are useless without
+# the other...
 %{_libdir}/libkaddressbookmergelibprivate.so.5*
 %{_libdir}/libshorturlpluginprivate.so.5*
 %{_libdir}/libkaddressbookimportexportlibprivate.so.5*
 %{_libdir}/libadblocklibprivate.so.5*
+%{_libdir}/contacteditor
+%{_libdir}/qt5/plugins/contacteditor
+%{_libdir}/qt5/plugins/importwizard/*.so
 %{_libdir}/qt5/plugins/kaddressbook/*.so
 %{_libdir}/qt5/plugins/kmail/*.so
 %{_libdir}/qt5/plugins/korg_datenums.so
-%{_libdir}/qt5/plugins/korg_hebrew.so
 %{_libdir}/qt5/plugins/korg_picoftheday.so
 %{_libdir}/qt5/plugins/korg_thisdayinhistory.so
-%{_libdir}/qt5/plugins/libksieve/imapfoldercompletionplugin.so
 %{_libdir}/qt5/plugins/messageviewer/*.so
-%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_mstnef.so
-%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_calendar.so
-%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_vcard.so
-%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_text_xdiff.so
+%{_libdir}/qt5/plugins/messageviewer/bodypartformatter
 %{_libdir}/qt5/plugins/pimcommon/*.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/*.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
 %{_libdir}/qt5/plugins/webengineviewer/*.so
-%{_libdir}/qt5/plugins/messageviewer_bodypartformatter_application_gnupgwks.so
+%{_libdir}/qt5/plugins/libksieve
+%{_libdir}/qt5/plugins/mailtransport
+%{_libdir}/qt5/plugins/templateparser
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
+%{_datadir}/contacteditor
 %{_datadir}/kmail2/pics/*
 %{_datadir}/kservices5/korganizer/datenums.desktop
-%{_datadir}/kservices5/korganizer/hebrew.desktop
 %{_datadir}/kservices5/korganizer/picoftheday.desktop
 %{_datadir}/kservices5/korganizer/thisdayinhistory.desktop
-%{_datadir}/messageviewer/plugins/bodypartformatter/*.desktop
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
+%{_datadir}/mime/packages/application-vnd-apple-pkpass.xml
 
 %prep
 %setup -q
@@ -119,21 +123,4 @@ Add-Ons for the KDE PIM suite.
 
 %install
 %ninja_install -C build
-%find_lang cryptopageplugin
-%find_lang customtoolsplugin
-%find_lang kaddressbook_importexportplugins
-%find_lang kaddressbook_plugins
-%find_lang kmail_editor_plugins
-%find_lang kmail_editorsendcheck_plugins
-%find_lang kmail_plugins
-%find_lang korganizer_plugins
-%find_lang mailreader
-%find_lang messageviewer_application_gnupgwks_plugin
-%find_lang messageviewer_application_mstnef_plugin
-%find_lang messageviewer_text_calendar_plugin
-%find_lang messageviewer_text_vcard_plugin
-%find_lang messageviewerheaderplugins
-%find_lang messageviewerplugins
-%find_lang sieveeditor_plugins
-%find_lang webengineurlinterceptor
-cat *.lang >all.lang
+%find_lang %{name} --all-name --with-html
