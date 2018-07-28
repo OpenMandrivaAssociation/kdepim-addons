@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	 18.04.3
+Version:	 18.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -119,6 +119,7 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt5/plugins/webengineviewer/*.so
 %{_libdir}/qt5/plugins/libksieve
 %{_libdir}/qt5/plugins/mailtransport
+%{_libdir}/qt5/plugins/messageviewer/grantlee/*/kitinerary_grantlee_extension.so
 %{_libdir}/qt5/plugins/templateparser
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
@@ -128,7 +129,6 @@ Add-Ons for the KDE PIM suite.
 %{_datadir}/kservices5/korganizer/picoftheday.desktop
 %{_datadir}/kservices5/korganizer/thisdayinhistory.desktop
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
-%{_datadir}/mime/packages/application-vnd-apple-pkpass.xml
 
 %prep
 %setup -q
