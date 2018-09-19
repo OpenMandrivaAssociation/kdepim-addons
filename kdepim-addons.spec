@@ -78,6 +78,7 @@ BuildRequires:	cmake(KF5MailImporterAkonadi)
 BuildRequires:	cmake(Gpgmepp)
 BuildRequires:	cmake(SharedMimeInfo)
 BuildRequires:	cmake(KPimPkPass)
+BuildRequires:	cmake(KPimItinerary)
 BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:	pkgconfig(shared-mime-info)
 Conflicts:	kmail <= 3:16.04.3-2
