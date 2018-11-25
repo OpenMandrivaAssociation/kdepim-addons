@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	 18.08.3
+Version:	 18.11.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -87,6 +87,17 @@ Conflicts:	kmail <= 3:16.04.3-2
 Add-Ons for the KDE PIM suite.
 
 %files -f %{name}.lang
+%{_bindir}/akonadimailreader
+%{_bindir}/coisceim
+%{_bindir}/etm_usage
+%{_datadir}/applications/org.kde.akonadimailreader.desktop
+%{_datadir}/config.kcfg/mailreader.kcfg
+%{_datadir}/kservices5/coisceimpart.desktop
+%{_datadir}/kxmlgui5/akonadimailreader
+%{_datadir}/messageviewer/themes
+%{_datadir}/messageviewerplugins/externalscriptexample.desktop
+%{_datadir}/qtcreator/templates/kmaileditorconvertertextplugins
+%{_datadir}/qtcreator/templates/kmaileditorplugins
 %config %{_sysconfdir}/xdg/kdepim-addons.categories
 %config %{_sysconfdir}/xdg/kdepim-addons.renamecategories
 %config %{_sysconfdir}/xdg/kmail.antispamrc
@@ -105,9 +116,10 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/libshorturlpluginprivate.so.5*
 %{_libdir}/libkaddressbookimportexportlibprivate.so.5*
 %{_libdir}/libadblocklibprivate.so.5*
+%{_libdir}/libcoisceim_widget.so.5*
 %{_libdir}/contacteditor
 %{_libdir}/qt5/plugins/contacteditor
-%{_libdir}/qt5/plugins/importwizard/*.so
+%{_libdir}/qt5/plugins/coisceimpart.so
 %{_libdir}/qt5/plugins/kaddressbook/*.so
 %{_libdir}/qt5/plugins/kmail/*.so
 %{_libdir}/qt5/plugins/korg_datenums.so
