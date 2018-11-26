@@ -120,6 +120,7 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/contacteditor
 %{_libdir}/qt5/plugins/contacteditor
 %{_libdir}/qt5/plugins/coisceimpart.so
+%{_libdir}/qt5/plugins/importwizard/*.so
 %{_libdir}/qt5/plugins/kaddressbook/*.so
 %{_libdir}/qt5/plugins/kmail/*.so
 %{_libdir}/qt5/plugins/korg_datenums.so
