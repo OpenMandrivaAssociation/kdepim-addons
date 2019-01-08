@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	 18.12.0
+Version:	 18.12.1
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -81,6 +81,7 @@ BuildRequires:	cmake(KPimPkPass)
 BuildRequires:	cmake(KPimItinerary)
 BuildRequires:	pkgconfig(poppler-qt5)
 BuildRequires:	pkgconfig(shared-mime-info)
+BuildRequires:	pkgconfig(libmarkdown)
 Conflicts:	kmail <= 3:16.04.3-2
 
 %description
@@ -147,7 +148,8 @@ Add-Ons for the KDE PIM suite.
 
 %prep
 %setup -q
-%cmake_kde5
+%cmake_kde5 \
+	-DKDEPIMADDONS_BUILD_EXAMPLES:BOOL=true
 
 %build
 %ninja -C build
