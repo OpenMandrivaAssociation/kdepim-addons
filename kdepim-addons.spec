@@ -1,7 +1,7 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	 18.12.3
-Release:	2
+Version:	 19.04.0
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -118,6 +118,9 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/libkaddressbookimportexportlibprivate.so.5*
 %{_libdir}/libadblocklibprivate.so.5*
 %{_libdir}/libcoisceim_widget.so.5*
+%{_libdir}/libgrammarcommon.so.5*
+%{_libdir}/libkmailgrammalecte.so.5*
+%{_libdir}/libkmaillanguagetool.so.5*
 %{_libdir}/contacteditor
 %{_libdir}/qt5/plugins/contacteditor
 %{_libdir}/qt5/plugins/coisceimpart.so
