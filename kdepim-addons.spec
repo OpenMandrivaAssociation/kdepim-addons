@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	 19.04.1
+Version:	19.04.1
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -13,6 +13,7 @@ Url:		http://www.kde.org
 %define ftpdir stable
 %endif
 Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		kdepim-addons-19.04.1-akonadimailreader-menu.patch
 Source100:	%{name}.rpmlintrc
 BuildRequires:	sasl-devel
 BuildRequires:	boost-devel
@@ -87,14 +88,23 @@ Conflicts:	kmail <= 3:16.04.3-2
 %description
 Add-Ons for the KDE PIM suite.
 
-%files -f %{name}.lang
+%package akonadimailreader
+Summary:	A simple Akonadi mail reader
+Group:		Graphical desktop/KDE
+
+%description akonadimailreader
+A simple Akonadi mail reader
+
+%files akonadimailreader
 %{_bindir}/akonadimailreader
-%{_bindir}/coisceim
-%{_bindir}/etm_usage
 %{_datadir}/applications/org.kde.akonadimailreader.desktop
 %{_datadir}/config.kcfg/mailreader.kcfg
-%{_datadir}/kservices5/coisceimpart.desktop
 %{_datadir}/kxmlgui5/akonadimailreader
+
+%files -f %{name}.lang
+%{_bindir}/coisceim
+%{_bindir}/etm_usage
+%{_datadir}/kservices5/coisceimpart.desktop
 %{_datadir}/messageviewer/themes
 %{_datadir}/messageviewerplugins/externalscriptexample.desktop
 %{_datadir}/qtcreator/templates/kmaileditorconvertertextplugins
@@ -150,7 +160,7 @@ Add-Ons for the KDE PIM suite.
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5 \
 	-DKDEPIMADDONS_BUILD_EXAMPLES:BOOL=true
 
