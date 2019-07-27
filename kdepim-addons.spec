@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	19.04.3
+Version:	19.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -109,10 +109,10 @@ A simple Akonadi mail reader
 %{_datadir}/messageviewerplugins/externalscriptexample.desktop
 %{_datadir}/qtcreator/templates/kmaileditorconvertertextplugins
 %{_datadir}/qtcreator/templates/kmaileditorplugins
-%config %{_sysconfdir}/xdg/kdepim-addons.categories
-%config %{_sysconfdir}/xdg/kdepim-addons.renamecategories
-%config %{_sysconfdir}/xdg/kmail.antispamrc
-%config %{_sysconfdir}/xdg/kmail.antivirusrc
+%{_datadir}/qlogging-categories5/kdepim-addons.categories
+%{_datadir}/qlogging-categories5/kdepim-addons.renamecategories
+%{_datadir}/qlogging-categories5/kmail.antispamrc
+%{_datadir}/qlogging-categories5/kmail.antivirusrc
 %{_bindir}/kmail_antivir.sh
 %{_bindir}/kmail_clamav.sh
 %{_bindir}/kmail_fprot.sh
@@ -131,6 +131,7 @@ A simple Akonadi mail reader
 %{_libdir}/libgrammarcommon.so.5*
 %{_libdir}/libkmailgrammalecte.so.5*
 %{_libdir}/libkmaillanguagetool.so.5*
+%{_libdir}/libkmailmarkdown.so.5*
 %{_libdir}/contacteditor
 %{_libdir}/qt5/plugins/contacteditor
 %{_libdir}/qt5/plugins/coisceimpart.so
@@ -158,6 +159,7 @@ A simple Akonadi mail reader
 %{_datadir}/kservices5/korganizer/picoftheday.desktop
 %{_datadir}/kservices5/korganizer/thisdayinhistory.desktop
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
+%{_datadir}/kconf_update/languagetool_kmail.upd
 
 %prep
 %autosetup -p1
