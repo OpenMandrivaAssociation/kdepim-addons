@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	19.07.80
+Version:	19.07.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -111,8 +111,8 @@ A simple Akonadi mail reader
 %{_datadir}/qtcreator/templates/kmaileditorplugins
 %{_datadir}/qlogging-categories5/kdepim-addons.categories
 %{_datadir}/qlogging-categories5/kdepim-addons.renamecategories
-%{_datadir}/qlogging-categories5/kmail.antispamrc
-%{_datadir}/qlogging-categories5/kmail.antivirusrc
+%{_sysconfdir}/xdg/kmail.antispamrc
+%{_sysconfdir}/xdg/kmail.antivirusrc
 %{_bindir}/kmail_antivir.sh
 %{_bindir}/kmail_clamav.sh
 %{_bindir}/kmail_fprot.sh
