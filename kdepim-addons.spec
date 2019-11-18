@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	19.08.3
+Version:	19.11.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -106,7 +106,6 @@ A simple Akonadi mail reader
 %{_bindir}/coisceim
 %{_bindir}/etm_usage
 %{_datadir}/kservices5/coisceimpart.desktop
-%{_datadir}/messageviewer/themes
 %{_datadir}/messageviewerplugins/externalscriptexample.desktop
 %{_datadir}/qtcreator/templates/kmaileditorconvertertextplugins
 %{_datadir}/qtcreator/templates/kmaileditorplugins
@@ -133,9 +132,11 @@ A simple Akonadi mail reader
 %{_libdir}/libkmailgrammalecte.so.5*
 %{_libdir}/libkmaillanguagetool.so.5*
 %{_libdir}/libkmailmarkdown.so.5*
+%{_libdir}/libdkimverifyconfigure.so.5*
+%{_libdir}/libkmailquicktextpluginprivate.so.5*
 %{_libdir}/contacteditor
-%{_libdir}/qt5/plugins/contacteditor
 %{_libdir}/qt5/plugins/coisceimpart.so
+%{_libdir}/qt5/plugins/akonadi/*.so
 %{_libdir}/qt5/plugins/importwizard/*.so
 %{_libdir}/qt5/plugins/kaddressbook/*.so
 %{_libdir}/qt5/plugins/kmail/*.so
@@ -154,8 +155,6 @@ A simple Akonadi mail reader
 %{_libdir}/qt5/plugins/templateparser
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
-%{_datadir}/contacteditor
-%{_datadir}/kmail2/pics/*
 %{_datadir}/kservices5/korganizer/datenums.desktop
 %{_datadir}/kservices5/korganizer/picoftheday.desktop
 %{_datadir}/kservices5/korganizer/thisdayinhistory.desktop
