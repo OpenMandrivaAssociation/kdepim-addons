@@ -1,7 +1,7 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
 Version:	19.12.2
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
