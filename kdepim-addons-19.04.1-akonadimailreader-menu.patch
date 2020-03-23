@@ -1,8 +1,0 @@
-diff -up kdepim-addons-19.04.1/examples/apps/mailreader/org.kde.akonadimailreader.desktop.omv~ kdepim-addons-19.04.1/examples/apps/mailreader/org.kde.akonadimailreader.desktop
---- kdepim-addons-19.04.1/examples/apps/mailreader/org.kde.akonadimailreader.desktop.omv~	2019-05-25 23:41:14.351347176 +0200
-+++ kdepim-addons-19.04.1/examples/apps/mailreader/org.kde.akonadimailreader.desktop	2019-05-25 23:42:41.436342951 +0200
-@@ -68,3 +68,4 @@ GenericName[zh_CN]=基于 Akonadi 的简
- GenericName[zh_TW]=簡單的基於 Akonadi 郵件程序
- Terminal=false
- X-DBUS-ServiceName=org.kde.akonadimailreader
-+Categories=Qt;KDE;Office;Network;Email;X-KDE-More;

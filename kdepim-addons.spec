@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	19.12.3
+Version:	20.03.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -13,7 +13,6 @@ Url:		http://www.kde.org
 %define ftpdir stable
 %endif
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
-Patch0:		kdepim-addons-19.04.1-akonadimailreader-menu.patch
 Source100:	%{name}.rpmlintrc
 BuildRequires:	sasl-devel
 BuildRequires:	boost-devel
@@ -88,23 +87,7 @@ Conflicts:	kmail <= 3:16.04.3-2
 %description
 Add-Ons for the KDE PIM suite.
 
-%package akonadimailreader
-Summary:	A simple Akonadi mail reader
-Group:		Graphical desktop/KDE
-
-%description akonadimailreader
-A simple Akonadi mail reader
-
-%files akonadimailreader
-%{_bindir}/akonadimailreader
-%{_datadir}/applications/org.kde.akonadimailreader.desktop
-%{_datadir}/config.kcfg/mailreader.kcfg
-%{_datadir}/kxmlgui5/akonadimailreader
-
 %files -f %{name}.lang
-%{_bindir}/coisceim
-%{_bindir}/etm_usage
-%{_datadir}/kservices5/coisceimpart.desktop
 %{_datadir}/messageviewerplugins/externalscriptexample.desktop
 %{_datadir}/qtcreator/templates/kmaileditorconvertertextplugins
 %{_datadir}/qtcreator/templates/kmaileditorplugins
@@ -126,7 +109,6 @@ A simple Akonadi mail reader
 %{_libdir}/libshorturlpluginprivate.so.5*
 %{_libdir}/libkaddressbookimportexportlibprivate.so.5*
 %{_libdir}/libadblocklibprivate.so.5*
-%{_libdir}/libcoisceim_widget.so.5*
 %{_libdir}/libgrammarcommon.so.5*
 %{_libdir}/libkmailgrammalecte.so.5*
 %{_libdir}/libkmaillanguagetool.so.5*
@@ -134,20 +116,14 @@ A simple Akonadi mail reader
 %{_libdir}/libdkimverifyconfigure.so.5*
 %{_libdir}/libkmailquicktextpluginprivate.so.5*
 %{_libdir}/contacteditor
-%{_libdir}/qt5/plugins/coisceimpart.so
 %{_libdir}/qt5/plugins/akonadi/*.so
 %{_libdir}/qt5/plugins/importwizard/*.so
-%{_libdir}/qt5/plugins/kaddressbook/*.so
-%{_libdir}/qt5/plugins/kmail/*.so
 %{_libdir}/qt5/plugins/korg_datenums.so
 %{_libdir}/qt5/plugins/korg_picoftheday.so
 %{_libdir}/qt5/plugins/korg_thisdayinhistory.so
-%{_libdir}/qt5/plugins/messageviewer/*.so
 %{_libdir}/qt5/plugins/messageviewer/bodypartformatter
-%{_libdir}/qt5/plugins/pimcommon/*.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/*.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
-%{_libdir}/qt5/plugins/webengineviewer/*.so
 %{_libdir}/qt5/plugins/libksieve
 %{_libdir}/qt5/plugins/mailtransport
 %{_libdir}/qt5/plugins/messageviewer/grantlee/*/kitinerary_grantlee_extension.so
@@ -159,6 +135,39 @@ A simple Akonadi mail reader
 %{_datadir}/kservices5/korganizer/thisdayinhistory.desktop
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
 %{_datadir}/kconf_update/languagetool_kmail.upd
+%{_libdir}/qt5/plugins/kaddressbook/importexportplugin/kaddressbook_importexportcsvplugin.so
+%{_libdir}/qt5/plugins/kaddressbook/importexportplugin/kaddressbook_importexportgmxplugin.so
+%{_libdir}/qt5/plugins/kaddressbook/importexportplugin/kaddressbook_importexportldapplugin.so
+%{_libdir}/qt5/plugins/kaddressbook/importexportplugin/kaddressbook_importexportldifplugin.so
+%{_libdir}/qt5/plugins/kaddressbook/importexportplugin/kaddressbook_importexportvcardplugin.so
+%{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_checkgravatarplugin.so
+%{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_mergecontactsplugin.so
+%{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_searchduplicatesplugin.so
+%{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_sendmailplugin.so
+%{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_sendvcardsplugin.so
+%{_libdir}/qt5/plugins/kmail/mainview/kmail_antispamplugin.so
+%{_libdir}/qt5/plugins/kmail/mainview/kmail_antivirusplugin.so
+%{_libdir}/qt5/plugins/kmail/mainview/kmail_expertplugin.so
+%{_libdir}/qt5/plugins/kmail/mainview/kmail_logactivitiesplugin.so
+%{_libdir}/qt5/plugins/kmail/plugincheckbeforesend/kmail_automaticaddcontactseditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugincheckbeforesend/kmail_checkbeforesendeditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugincheckbeforesend/kmail_confirmaddresseditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_autocorrectioneditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_changecaseeditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_insertemaileditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_insertshorturleditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_insertspecialcharactereditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_nonbreakingspaceeditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_quicktextplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_sharetexteditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_zoomtexteditorplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditorconverttext/kmail_markdownplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditorgrammar/kmail_grammalecteplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditorgrammar/kmail_languagetoolplugin.so
+%{_libdir}/qt5/plugins/kmail/plugineditorinit/kmail_externalcomposereditorplugin.so
+%{_libdir}/qt5/plugins/messageviewer
+%{_libdir}/qt5/plugins/pimcommon
+%{_libdir}/qt5/plugins/webengineviewer
 
 %prep
 %autosetup -p1
