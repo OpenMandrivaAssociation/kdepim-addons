@@ -14,6 +14,7 @@ Url:		http://www.kde.org
 %endif
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
+Patch0:		kdepim-addons-20.03.90-qt-5.15.patch
 BuildRequires:	sasl-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)

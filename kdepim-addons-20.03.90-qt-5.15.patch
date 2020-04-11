@@ -1,0 +1,72 @@
+diff -up kdepim-addons-20.03.90/kaddressbook/plugins/mergelib/manualmerge/mergecontactwidget.cpp.omv~ kdepim-addons-20.03.90/kaddressbook/plugins/mergelib/manualmerge/mergecontactwidget.cpp
+--- kdepim-addons-20.03.90/kaddressbook/plugins/mergelib/manualmerge/mergecontactwidget.cpp.omv~	2020-04-11 17:39:01.914053045 +0200
++++ kdepim-addons-20.03.90/kaddressbook/plugins/mergelib/manualmerge/mergecontactwidget.cpp	2020-04-11 17:39:06.672105801 +0200
+@@ -84,7 +84,7 @@ MergeContactWidget::MergeContactWidget(Q
+     mCollectionCombobox->setMinimumWidth(250);
+     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
+     mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
+-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
++#if QT_VERSION <= QT_VERSION_CHECK(5, 15, 0)
+     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &MergeContactWidget::slotUpdateMergeButton);
+ #else
+     connect(mCollectionCombobox, qOverload<int, const QString &>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &MergeContactWidget::slotUpdateMergeButton);
+diff -up kdepim-addons-20.03.90/kaddressbook/plugins/mergelib/searchduplicate/searchduplicateresultwidget.cpp.omv~ kdepim-addons-20.03.90/kaddressbook/plugins/mergelib/searchduplicate/searchduplicateresultwidget.cpp
+--- kdepim-addons-20.03.90/kaddressbook/plugins/mergelib/searchduplicate/searchduplicateresultwidget.cpp.omv~	2020-04-11 17:39:48.913576890 +0200
++++ kdepim-addons-20.03.90/kaddressbook/plugins/mergelib/searchduplicate/searchduplicateresultwidget.cpp	2020-04-11 17:39:53.440627659 +0200
+@@ -73,7 +73,7 @@ SearchDuplicateResultWidget::SearchDupli
+     mCollectionCombobox->setMinimumWidth(250);
+     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
+     mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
+-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
++#if QT_VERSION <= QT_VERSION_CHECK(5, 15, 0)
+     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &SearchDuplicateResultWidget::slotUpdateMergeButton);
+ #else
+     connect(mCollectionCombobox, qOverload<int, const QString &>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &SearchDuplicateResultWidget::slotUpdateMergeButton);
+diff -up kdepim-addons-20.03.90/kmail/editorsendcheckplugins/automaticaddcontacts/automaticaddcontactstabwidget.cpp.omv~ kdepim-addons-20.03.90/kmail/editorsendcheckplugins/automaticaddcontacts/automaticaddcontactstabwidget.cpp
+--- kdepim-addons-20.03.90/kmail/editorsendcheckplugins/automaticaddcontacts/automaticaddcontactstabwidget.cpp.omv~	2020-04-11 17:38:27.303671268 +0200
++++ kdepim-addons-20.03.90/kmail/editorsendcheckplugins/automaticaddcontacts/automaticaddcontactstabwidget.cpp	2020-04-11 17:38:33.672741259 +0200
+@@ -60,7 +60,7 @@ AutomaticAddContactsTabWidget::Automatic
+     mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
+     hlay->addWidget(mCollectionCombobox);
+     hlay->addStretch(1);
+-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
++#if QT_VERSION <= QT_VERSION_CHECK(5, 15, 0)
+     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &AutomaticAddContactsTabWidget::configureChanged);
+ #else
+     connect(mCollectionCombobox, qOverload<int, const QString &>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &AutomaticAddContactsTabWidget::configureChanged);
+diff -up kdepim-addons-20.03.90/plugins/messageviewerplugins/createeventplugin/eventedit.cpp.omv~ kdepim-addons-20.03.90/plugins/messageviewerplugins/createeventplugin/eventedit.cpp
+--- kdepim-addons-20.03.90/plugins/messageviewerplugins/createeventplugin/eventedit.cpp.omv~	2020-04-11 17:35:50.153987592 +0200
++++ kdepim-addons-20.03.90/plugins/messageviewerplugins/createeventplugin/eventedit.cpp	2020-04-11 17:35:54.912037218 +0200
+@@ -83,7 +83,7 @@ EventEdit::EventEdit(QWidget *parent)
+ #endif
+     mCollectionCombobox->setToolTip(i18n("Calendar where the new event will be stored"));
+ 
+-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
++#if QT_VERSION <= QT_VERSION_CHECK(5, 15, 0)
+     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &EventEdit::slotCollectionChanged);
+ #else
+     connect(mCollectionCombobox, qOverload<int, const QString &>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &EventEdit::slotCollectionChanged);
+diff -up kdepim-addons-20.03.90/plugins/messageviewerplugins/createnoteplugin/noteedit.cpp.omv~ kdepim-addons-20.03.90/plugins/messageviewerplugins/createnoteplugin/noteedit.cpp
+--- kdepim-addons-20.03.90/plugins/messageviewerplugins/createnoteplugin/noteedit.cpp.omv~	2020-04-11 17:36:58.454708505 +0200
++++ kdepim-addons-20.03.90/plugins/messageviewerplugins/createnoteplugin/noteedit.cpp	2020-04-11 17:37:03.324760580 +0200
+@@ -75,7 +75,7 @@ NoteEdit::NoteEdit(QWidget *parent)
+     mCollectionCombobox->setAccessibleDescription(i18n("Calendar where the new event will be stored."));
+ #endif
+     mCollectionCombobox->setToolTip(i18n("Calendar where the new event will be stored"));
+-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
++#if QT_VERSION <= QT_VERSION_CHECK(5, 15, 0)
+     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &NoteEdit::slotCollectionChanged);
+ #else
+     connect(mCollectionCombobox, qOverload<int, const QString &>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &NoteEdit::slotCollectionChanged);
+diff -up kdepim-addons-20.03.90/plugins/messageviewerplugins/createtodoplugin/todoedit.cpp.omv~ kdepim-addons-20.03.90/plugins/messageviewerplugins/createtodoplugin/todoedit.cpp
+--- kdepim-addons-20.03.90/plugins/messageviewerplugins/createtodoplugin/todoedit.cpp.omv~	2020-04-11 17:31:55.242673603 +0200
++++ kdepim-addons-20.03.90/plugins/messageviewerplugins/createtodoplugin/todoedit.cpp	2020-04-11 17:35:39.550877344 +0200
+@@ -91,7 +91,7 @@ TodoEdit::TodoEdit(QWidget *parent)
+     mCollectionCombobox->setAccessibleDescription(i18n("Todo list where the new task will be stored."));
+ #endif
+     mCollectionCombobox->setToolTip(i18n("Todo list where the new task will be stored"));
+-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
++#if QT_VERSION <= QT_VERSION_CHECK(5, 15, 0)
+     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &TodoEdit::slotCollectionChanged);
+ #else
+     connect(mCollectionCombobox, qOverload<int, const QString &>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &TodoEdit::slotCollectionChanged);
