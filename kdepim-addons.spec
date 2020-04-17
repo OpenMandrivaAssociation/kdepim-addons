@@ -1,7 +1,7 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	20.03.90
-Release:	2
+Version:	20.04.0
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -14,7 +14,6 @@ Url:		http://www.kde.org
 %endif
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
-Patch0:		kdepim-addons-20.03.90-qt-5.15.patch
 BuildRequires:	sasl-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
