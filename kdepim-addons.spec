@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	20.04.3
+Version:	20.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -55,7 +55,6 @@ BuildRequires:	cmake(KF5KaddressbookImportExport)
 BuildRequires:	cmake(KF5Libkleo)
 BuildRequires:	cmake(KF5GrantleeTheme)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
-BuildRequires:	cmake(KF5LibkdepimAkonadi)
 BuildRequires:	cmake(KF5IncidenceEditor)
 BuildRequires:	cmake(KF5MessageCore)
 BuildRequires:	cmake(KF5MessageComposer)
