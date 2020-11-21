@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	20.08.3
+Version:	20.11.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -106,8 +106,9 @@ Add-Ons for the KDE PIM suite.
 # the other...
 %{_libdir}/libkaddressbookmergelibprivate.so.5*
 %{_libdir}/libshorturlpluginprivate.so.5*
-%{_libdir}/libkaddressbookimportexportlibprivate.so.5*
 %{_libdir}/libadblocklibprivate.so.5*
+%{_libdir}/libexpireaccounttrashfolderconfig.so.5*
+%{_libdir}/libfolderconfiguresettings.so.5*
 %{_libdir}/libgrammarcommon.so.5*
 %{_libdir}/libkmailgrammalecte.so.5*
 %{_libdir}/libkmaillanguagetool.so.5*
@@ -134,11 +135,6 @@ Add-Ons for the KDE PIM suite.
 %{_datadir}/kservices5/korganizer/thisdayinhistory.desktop
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
 %{_datadir}/kconf_update/languagetool_kmail.upd
-%{_libdir}/qt5/plugins/kaddressbook/importexportplugin/kaddressbook_importexportcsvplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/importexportplugin/kaddressbook_importexportgmxplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/importexportplugin/kaddressbook_importexportldapplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/importexportplugin/kaddressbook_importexportldifplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/importexportplugin/kaddressbook_importexportvcardplugin.so
 %{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_checkgravatarplugin.so
 %{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_mergecontactsplugin.so
 %{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_searchduplicatesplugin.so
