@@ -1,7 +1,7 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
 Version:	20.11.90
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -72,6 +72,8 @@ BuildRequires:	cmake(KF5Tnef)
 BuildRequires:	cmake(KF5MailTransportAkonadi)
 BuildRequires:	cmake(KF5AkonadiContact)
 BuildRequires:	cmake(KPimImportWizard)
+BuildRequires:	cmake(KPimAddressbookImportExport)
+BuildRequires:	cmake(KPimImportWizard)
 BuildRequires:	cmake(KF5MailImporterAkonadi)
 BuildRequires:	cmake(KF5KontactInterface)
 BuildRequires:	cmake(Gpgmepp)
@@ -118,6 +120,7 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/contacteditor
 %{_libdir}/qt5/plugins/akonadi/*.so
 %{_libdir}/qt5/plugins/importwizard/*.so
+%{_libdir}/qt5/plugins/kaddressbook/importexportplugin
 %{_libdir}/qt5/plugins/korg_datenums.so
 %{_libdir}/qt5/plugins/korg_picoftheday.so
 %{_libdir}/qt5/plugins/korg_thisdayinhistory.so
