@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	21.04.2
+Version:	21.07.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -112,6 +112,7 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/libexpireaccounttrashfolderconfig.so.5*
 %{_libdir}/libfolderconfiguresettings.so.5*
 %{_libdir}/libgrammarcommon.so.5*
+%{_libdir}/libkmailconfirmbeforedeleting.so.*
 %{_libdir}/libkmailgrammalecte.so.5*
 %{_libdir}/libkmaillanguagetool.so.5*
 %{_libdir}/libkmailmarkdown.so.5*
