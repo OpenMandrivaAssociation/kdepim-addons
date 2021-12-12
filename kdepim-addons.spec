@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -167,6 +167,13 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt5/plugins/messageviewer
 %{_libdir}/qt5/plugins/pimcommon
 %{_libdir}/qt5/plugins/webengineviewer
+%{_libdir}/libscamconfiguresettings.so.5*
+%{_libdir}/qt5/plugins/korg_lunarphases.so
+%{_datadir}/icons/hicolor/scalable/status/moon-phase-first-quarter.svg
+%{_datadir}/icons/hicolor/scalable/status/moon-phase-full.svg
+%{_datadir}/icons/hicolor/scalable/status/moon-phase-last-quarter.svg
+%{_datadir}/icons/hicolor/scalable/status/moon-phase-new.svg
+%{_datadir}/kservices5/korganizer/lunarphases.desktop
 
 %prep
 %autosetup -p1
