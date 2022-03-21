@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	21.12.2
+Version:	22.03.80
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -125,13 +125,12 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt5/plugins/korg_datenums.so
 %{_libdir}/qt5/plugins/korg_picoftheday.so
 %{_libdir}/qt5/plugins/korg_thisdayinhistory.so
-%{_libdir}/qt5/plugins/messageviewer/bodypartformatter
 %{_libdir}/qt5/plugins/plasmacalendarplugins/*.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
 %{_libdir}/qt5/plugins/libksieve
-%{_libdir}/qt5/plugins/mailtransport
-%{_libdir}/qt5/plugins/messageviewer/grantlee/*/kitinerary_grantlee_extension.so
 %{_libdir}/qt5/plugins/templateparser
+%{_libdir}/libopenurlwithconfigure.so.5*
+%{_libdir}/qt5/plugins/kf5/mailtransport
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
 %{_datadir}/kservices5/korganizer/datenums.desktop
