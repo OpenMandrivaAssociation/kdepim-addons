@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	22.03.90
+Version:	22.04.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
