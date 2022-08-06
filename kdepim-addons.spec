@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	22.04.2
+Version:	22.07.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -118,61 +118,58 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/libkmailmarkdown.so.5*
 %{_libdir}/libdkimverifyconfigure.so.5*
 %{_libdir}/libkmailquicktextpluginprivate.so.5*
-%{_libdir}/contacteditor
-%{_libdir}/qt5/plugins/akonadi/*.so
-%{_libdir}/qt5/plugins/importwizard/*.so
-%{_libdir}/qt5/plugins/kaddressbook/importexportplugin
-%{_libdir}/qt5/plugins/korg_datenums.so
-%{_libdir}/qt5/plugins/korg_picoftheday.so
-%{_libdir}/qt5/plugins/korg_thisdayinhistory.so
+%{_libdir}/qt5/plugins/pim5/akonadi/*.so
+%{_libdir}/qt5/plugins/pim5/importwizard/*.so
+%{_libdir}/qt5/plugins/pim5/kaddressbook/importexportplugin
+%{_libdir}/qt5/plugins/pim5/korganizer/datenums.so
+%{_libdir}/qt5/plugins/pim5/korganizer/picoftheday.so
+%{_libdir}/qt5/plugins/pim5/korganizer/thisdayinhistory.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/*.so
 %{_libdir}/qt5/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
-%{_libdir}/qt5/plugins/libksieve
-%{_libdir}/qt5/plugins/templateparser
+%{_libdir}/qt5/plugins/pim5/libksieve
+%{_libdir}/qt5/plugins/pim5/templateparser
 %{_libdir}/libopenurlwithconfigure.so.5*
 %{_libdir}/qt5/plugins/kf5/mailtransport
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
-%{_datadir}/kservices5/korganizer/datenums.desktop
-%{_datadir}/kservices5/korganizer/picoftheday.desktop
-%{_datadir}/kservices5/korganizer/thisdayinhistory.desktop
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
 %{_datadir}/kconf_update/languagetool_kmail.upd
-%{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_checkgravatarplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_mergecontactsplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_searchduplicatesplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_sendmailplugin.so
-%{_libdir}/qt5/plugins/kaddressbook/mainview/kaddressbook_sendvcardsplugin.so
-%{_libdir}/qt5/plugins/kmail/mainview/kmail_antispamplugin.so
-%{_libdir}/qt5/plugins/kmail/mainview/kmail_antivirusplugin.so
-%{_libdir}/qt5/plugins/kmail/mainview/kmail_expertplugin.so
-%{_libdir}/qt5/plugins/kmail/mainview/kmail_logactivitiesplugin.so
-%{_libdir}/qt5/plugins/kmail/plugincheckbeforesend/kmail_automaticaddcontactseditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugincheckbeforesend/kmail_checkbeforesendeditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugincheckbeforesend/kmail_confirmaddresseditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_autocorrectioneditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_changecaseeditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_insertemaileditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_insertshorturleditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_insertspecialcharactereditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_nonbreakingspaceeditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_quicktextplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_sharetexteditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditor/kmail_zoomtexteditorplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditorconverttext/kmail_markdownplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditorgrammar/kmail_grammalecteplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditorgrammar/kmail_languagetoolplugin.so
-%{_libdir}/qt5/plugins/kmail/plugineditorinit/kmail_externalcomposereditorplugin.so
-%{_libdir}/qt5/plugins/messageviewer
-%{_libdir}/qt5/plugins/pimcommon
-%{_libdir}/qt5/plugins/webengineviewer
+%{_libdir}/qt5/plugins/pim5/kaddressbook/mainview/kaddressbook_checkgravatarplugin.so
+%{_libdir}/qt5/plugins/pim5/kaddressbook/mainview/kaddressbook_mergecontactsplugin.so
+%{_libdir}/qt5/plugins/pim5/kaddressbook/mainview/kaddressbook_searchduplicatesplugin.so
+%{_libdir}/qt5/plugins/pim5/kaddressbook/mainview/kaddressbook_sendmailplugin.so
+%{_libdir}/qt5/plugins/pim5/kaddressbook/mainview/kaddressbook_sendvcardsplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/mainview/kmail_antispamplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/mainview/kmail_antivirusplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/mainview/kmail_expertplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugincheckbeforesend/kmail_automaticaddcontactseditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugincheckbeforesend/kmail_checkbeforesendeditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugincheckbeforesend/kmail_confirmaddresseditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditor/kmail_autocorrectioneditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditor/kmail_changecaseeditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditor/kmail_insertemaileditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditor/kmail_insertshorturleditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditor/kmail_insertspecialcharactereditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditor/kmail_nonbreakingspaceeditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditor/kmail_quicktextplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditor/kmail_sharetexteditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditor/kmail_zoomtexteditorplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditorconverttext/kmail_markdownplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditorgrammar/kmail_grammalecteplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditorgrammar/kmail_languagetoolplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/plugineditorinit/kmail_externalcomposereditorplugin.so
+%{_libdir}/qt5/plugins/pim5/messageviewer
+%{_libdir}/qt5/plugins/pim5/pimcommon
+%{_libdir}/qt5/plugins/pim5/webengineviewer
 %{_libdir}/libscamconfiguresettings.so.5*
-%{_libdir}/qt5/plugins/korg_lunarphases.so
+%{_libdir}/qt5/plugins/pim5/korganizer/lunarphases.so
 %{_datadir}/icons/hicolor/scalable/status/moon-phase-first-quarter.svg
 %{_datadir}/icons/hicolor/scalable/status/moon-phase-full.svg
 %{_datadir}/icons/hicolor/scalable/status/moon-phase-last-quarter.svg
 %{_datadir}/icons/hicolor/scalable/status/moon-phase-new.svg
-%{_datadir}/kservices5/korganizer/lunarphases.desktop
+%{_libdir}/libakonadidatasetools.so.5*
+%{_libdir}/qt5/plugins/pim5/contacteditor/editorpageplugins/cryptopageplugin.so
+%{_libdir}/qt5/plugins/pim5/kmail/mainview/kmail_akonadidatabasetoolplugin.so
 
 %prep
 %autosetup -p1
