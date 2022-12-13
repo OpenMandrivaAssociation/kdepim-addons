@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	22.08.3
+Version:	22.12.0
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -128,8 +128,8 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt5/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
 %{_libdir}/qt5/plugins/pim5/libksieve
 %{_libdir}/qt5/plugins/pim5/templateparser
+%{_libdir}/qt5/plugins/pim5/mailtransport/mailtransport_sendplugin.so
 %{_libdir}/libopenurlwithconfigure.so.5*
-%{_libdir}/qt5/plugins/kf5/mailtransport
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
