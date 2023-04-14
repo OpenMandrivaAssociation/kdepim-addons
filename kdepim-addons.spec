@@ -1,7 +1,7 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -46,19 +46,21 @@ BuildRequires:	cmake(KF5Parts)
 BuildRequires:	cmake(KF5Prison)
 BuildRequires:	cmake(KF5Holidays)
 BuildRequires:	cmake(KF5CalendarUtils)
-BuildRequires:	cmake(KF5WebEngineViewer)
-BuildRequires:	cmake(KF5TemplateParser)
 BuildRequires:	cmake(KF5MailCommon)
 BuildRequires:	cmake(KF5KaddressbookGrantlee)
-BuildRequires:	cmake(KF5MessageViewer)
 BuildRequires:	cmake(KF5KaddressbookImportExport)
 BuildRequires:	cmake(KF5Libkleo)
 BuildRequires:	cmake(KF5GrantleeTheme)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
 BuildRequires:	cmake(KF5IncidenceEditor)
-BuildRequires:	cmake(KF5MessageCore)
-BuildRequires:	cmake(KF5MessageComposer)
-BuildRequires:	cmake(KF5MessageList)
+BuildRequires:	cmake(KPim5MessageCore)
+BuildRequires:	cmake(KPim5MessageComposer)
+BuildRequires:	cmake(KPim5MessageList)
+BuildRequires:	cmake(KPim5MessageViewer)
+BuildRequires:	cmake(KPim5TemplateParser)
+BuildRequires:	cmake(KPim5WebEngineViewer)
+BuildRequires:	cmake(KF5TextGrammarCheck)
+BuildRequires:	cmake(KF5TextTranslator)
 BuildRequires:	cmake(KF5CalendarSupport)
 BuildRequires:	cmake(KF5EventViews)
 BuildRequires:	cmake(KF5Akonadi)
@@ -111,10 +113,7 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/libadblocklibprivate.so.5*
 %{_libdir}/libexpireaccounttrashfolderconfig.so.5*
 %{_libdir}/libfolderconfiguresettings.so.5*
-%{_libdir}/libgrammarcommon.so.5*
 %{_libdir}/libkmailconfirmbeforedeleting.so.*
-%{_libdir}/libkmailgrammalecte.so.5*
-%{_libdir}/libkmaillanguagetool.so.5*
 %{_libdir}/libkmailmarkdown.so.5*
 %{_libdir}/libdkimverifyconfigure.so.5*
 %{_libdir}/libkmailquicktextpluginprivate.so.5*
@@ -133,7 +132,6 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
 %{_libdir}/qt5/qml/org/kde/plasma/PimCalendars/qmldir
 %{_datadir}/kconf_update/webengineurlinterceptoradblock.upd
-%{_datadir}/kconf_update/languagetool_kmail.upd
 %{_libdir}/qt5/plugins/pim5/kaddressbook/mainview/kaddressbook_checkgravatarplugin.so
 %{_libdir}/qt5/plugins/pim5/kaddressbook/mainview/kaddressbook_mergecontactsplugin.so
 %{_libdir}/qt5/plugins/pim5/kaddressbook/mainview/kaddressbook_searchduplicatesplugin.so
