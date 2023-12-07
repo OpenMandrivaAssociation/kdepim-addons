@@ -1,7 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		plasma6-kdepim-addons
 Version:	24.01.80
-Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -16,6 +15,7 @@ Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/kdepim
 BuildRequires:	sasl-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Network)
