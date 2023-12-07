@@ -1,7 +1,7 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		plasma6-kdepim-addons
 Version:	24.01.80
-Epoch:		3
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
