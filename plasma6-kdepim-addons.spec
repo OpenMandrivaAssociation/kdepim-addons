@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		plasma6-kdepim-addons
-Version:	24.01.80
+Version:	24.01.85
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -91,7 +91,6 @@ Add-Ons for the KDE PIM suite.
 %files -f %{name}.lang
 %{_datadir}/messageviewerplugins/externalscriptexample.desktop
 %{_datadir}/qtcreator/templates/kmaileditorconvertertextplugins
-%{_datadir}/qtcreator/templates/kmaileditorplugins
 %{_datadir}/qlogging-categories6/kdepim-addons.categories
 %{_datadir}/qlogging-categories6/kdepim-addons.renamecategories
 %{_sysconfdir}/xdg/kmail.antispamrc
