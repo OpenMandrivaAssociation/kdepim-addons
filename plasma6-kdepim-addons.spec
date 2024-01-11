@@ -1,6 +1,6 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		plasma6-kdepim-addons
-Version:	24.01.85
+Version:	24.01.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -154,7 +154,6 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt6/plugins/pim6/messageviewer
 %{_libdir}/qt6/plugins/pim6/pimcommon
 %{_libdir}/qt6/plugins/pim6/webengineviewer
-%{_libdir}/libscamconfiguresettings.so.*
 %{_libdir}/qt6/plugins/pim6/korganizer/lunarphases.so
 %{_datadir}/icons/hicolor/scalable/status/moon-phase-first-quarter.svg
 %{_datadir}/icons/hicolor/scalable/status/moon-phase-full.svg
