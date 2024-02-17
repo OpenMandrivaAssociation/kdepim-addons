@@ -1,7 +1,10 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Add-Ons for the KDE PIM suite
 Name:		plasma6-kdepim-addons
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
@@ -11,7 +14,11 @@ Url:		http://www.kde.org
 %else
 %define ftpdir stable
 %endif
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/pim/kdepim-addons/-/archive/%{gitbranch}/kdepim-addons-%{gitbranchd}.tar.bz2#/kdepim-addons-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/kdepim-addons-%{version}.tar.xz
+%endif
 BuildRequires:	sasl-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
@@ -164,7 +171,7 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt6/plugins/pim6/kmail/mainview/kmail_akonadidatabasetoolplugin.so
 
 %prep
-%autosetup -p1 -n kdepim-addons-%{version}
+%autosetup -p1 -n kdepim-addons-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja \
