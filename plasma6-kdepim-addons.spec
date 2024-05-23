@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Add-Ons for the KDE PIM suite
 Name:		plasma6-kdepim-addons
-Version:	24.02.2
+Version:	24.05.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -97,7 +97,6 @@ Add-Ons for the KDE PIM suite.
 
 %files -f %{name}.lang
 %{_datadir}/messageviewerplugins/externalscriptexample.desktop
-%{_datadir}/qtcreator/templates/kmaileditorconvertertextplugins
 %{_datadir}/qlogging-categories6/kdepim-addons.categories
 %{_datadir}/qlogging-categories6/kdepim-addons.renamecategories
 %{_sysconfdir}/xdg/kmail.antispamrc
