@@ -3,8 +3,8 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Add-Ons for the KDE PIM suite
 Name:		plasma6-kdepim-addons
-Version:	24.12.3
-Release:	%{?git:0.%{git}.}3
+Version:	25.04.0
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://www.kde.org
@@ -155,6 +155,10 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt6/plugins/pim6/kmail/plugineditorgrammar/kmail_grammalecteplugin.so
 %{_libdir}/qt6/plugins/pim6/kmail/plugineditorgrammar/kmail_languagetoolplugin.so
 %{_libdir}/qt6/plugins/pim6/kmail/plugineditorinit/kmail_externalcomposereditorplugin.so
+%{_qtdir}/plugins/pim6/kcms/kleopatra/kcm_kmail_gnupgsystem.so
+%{_qtdir}/plugins/pim6/kmail/mainview/kmail_checkfoldersizeaccount.so
+%{_qtdir}/plugins/pim6/ldapactivities/kldapactivitiesplugin.so
+%{_qtdir}/plugins/pim6/mailtransportactivities/kmailtransportactivitiesplugin.so
 %{_libdir}/qt6/plugins/pim6/messageviewer
 %{_libdir}/qt6/plugins/pim6/pimcommon
 %{_libdir}/qt6/plugins/pim6/webengineviewer
