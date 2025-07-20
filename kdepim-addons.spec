@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -92,7 +92,12 @@ BuildRequires:	cmake(KPim6Itinerary)
 BuildRequires:	pkgconfig(poppler-qt6)
 BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	pkgconfig(libmarkdown)
-Conflicts:	kmail <= 3:16.04.3-2
+
+%rename plasma6-kdepim-addons
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+BuildOption:	-DKDEPIMADDONS_BUILD_EXAMPLES:BOOL=true
 
 %description
 Add-Ons for the KDE PIM suite.
@@ -157,7 +162,6 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/qt6/plugins/pim6/kmail/plugineditorgrammar/kmail_languagetoolplugin.so
 %{_libdir}/qt6/plugins/pim6/kmail/plugineditorinit/kmail_externalcomposereditorplugin.so
 %{_qtdir}/plugins/pim6/kcms/kleopatra/kcm_kmail_gnupgsystem.so
-%{_qtdir}/plugins/pim6/kmail/mainview/kmail_checkfoldersizeaccount.so
 %{_qtdir}/plugins/pim6/ldapactivities/kldapactivitiesplugin.so
 %{_qtdir}/plugins/pim6/mailtransportactivities/kmailtransportactivitiesplugin.so
 %{_libdir}/qt6/plugins/pim6/messageviewer
@@ -166,17 +170,3 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/libakonadidatasetools.so.*
 %{_libdir}/qt6/plugins/pim6/contacteditor/editorpageplugins/cryptopageplugin.so
 %{_libdir}/qt6/plugins/pim6/kmail/mainview/kmail_akonadidatabasetoolplugin.so
-
-%prep
-%autosetup -p1 -n kdepim-addons-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja \
-	-DKDEPIMADDONS_BUILD_EXAMPLES:BOOL=true
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang %{name} --all-name --with-html
