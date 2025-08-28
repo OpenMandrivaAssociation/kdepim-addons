@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	25.04.3
+Version:	25.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -64,6 +64,7 @@ BuildRequires:	cmake(KPim6MessageList)
 BuildRequires:	cmake(KPim6MessageViewer)
 BuildRequires:	cmake(KPim6TemplateParser)
 BuildRequires:	cmake(KPim6WebEngineViewer)
+BuildRequires:	cmake(KF6TextAutoGenerateText)
 BuildRequires:	cmake(KF6TextGrammarCheck)
 BuildRequires:	cmake(KF6TextTranslator)
 BuildRequires:	cmake(KF6TextTemplate)
@@ -170,3 +171,8 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/libakonadidatasetools.so.*
 %{_libdir}/qt6/plugins/pim6/contacteditor/editorpageplugins/cryptopageplugin.so
 %{_libdir}/qt6/plugins/pim6/kmail/mainview/kmail_akonadidatabasetoolplugin.so
+%{_libdir}/libKPim6AutoGenerateText.so.*
+%{_qtdir}/plugins/pim6/kmail/mainview/kmail_checkfoldersizeaccount.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_aitooleditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_askautogeneratetexteditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_autogenerateanswerseditorplugin.so
