@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	25.12.0
+Version:	25.12.1
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
