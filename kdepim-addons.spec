@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	25.12.3
+Version:	26.04.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -126,50 +126,52 @@ Add-Ons for the KDE PIM suite.
 %{_libdir}/libkmailmarkdown.so.*
 %{_libdir}/libdkimverifyconfigure.so.*
 %{_libdir}/libkmailquicktextpluginprivate.so.*
-%{_libdir}/qt6/plugins/pim6/akonadi/*.so
-%{_libdir}/qt6/plugins/pim6/importwizard/*.so
-%{_libdir}/qt6/plugins/pim6/kaddressbook/importexportplugin
-%{_libdir}/qt6/plugins/plasmacalendarplugins/*.so
-%{_libdir}/qt6/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
-%{_libdir}/qt6/plugins/pim6/libksieve
-%{_libdir}/qt6/plugins/pim6/templateparser
-%{_libdir}/qt6/plugins/pim6/mailtransport/mailtransport_sendplugin.so
+%{_qtdir}/plugins/pim6/akonadi/*.so
+%{_qtdir}/plugins/pim6/importwizard/*.so
+%{_qtdir}/plugins/pim6/kaddressbook/importexportplugin
+%{_qtdir}/plugins/plasmacalendarplugins/*.so
+%{_qtdir}/plugins/plasmacalendarplugins/pimevents/PimEventsConfig.qml
+%{_qtdir}/plugins/pim6/libksieve
+%{_qtdir}/plugins/pim6/templateparser
+%{_qtdir}/plugins/pim6/mailtransport/mailtransport_sendplugin.so
 %{_libdir}/libopenurlwithconfigure.so.*
-%{_libdir}/qt6/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
-%{_libdir}/qt6/qml/org/kde/plasma/PimCalendars/qmldir
-%{_libdir}/qt6/plugins/pim6/kaddressbook/mainview/kaddressbook_checkgravatarplugin.so
-%{_libdir}/qt6/plugins/pim6/kaddressbook/mainview/kaddressbook_mergecontactsplugin.so
-%{_libdir}/qt6/plugins/pim6/kaddressbook/mainview/kaddressbook_searchduplicatesplugin.so
-%{_libdir}/qt6/plugins/pim6/kaddressbook/mainview/kaddressbook_sendmailplugin.so
-%{_libdir}/qt6/plugins/pim6/kaddressbook/mainview/kaddressbook_sendvcardsplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/mainview/kmail_antispamplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/mainview/kmail_antivirusplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/mainview/kmail_expertplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugincheckbeforesend/kmail_automaticaddcontactseditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugincheckbeforesend/kmail_checkbeforesendeditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugincheckbeforesend/kmail_confirmaddresseditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditor/kmail_autocorrectioneditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditor/kmail_changecaseeditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditor/kmail_insertemaileditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditor/kmail_insertshorturleditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditor/kmail_insertspecialcharactereditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditor/kmail_nonbreakingspaceeditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditor/kmail_quicktextplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditor/kmail_sharetexteditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditor/kmail_zoomtexteditorplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditorconverttext/kmail_markdownplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditorgrammar/kmail_grammalecteplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditorgrammar/kmail_languagetoolplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/plugineditorinit/kmail_externalcomposereditorplugin.so
+%{_qtdir}/qml/org/kde/plasma/PimCalendars/libpimcalendarsplugin.so
+%{_qtdir}/qml/org/kde/plasma/PimCalendars/qmldir
+%{_qtdir}/plugins/pim6/kaddressbook/mainview/kaddressbook_checkgravatarplugin.so
+%{_qtdir}/plugins/pim6/kaddressbook/mainview/kaddressbook_mergecontactsplugin.so
+%{_qtdir}/plugins/pim6/kaddressbook/mainview/kaddressbook_searchduplicatesplugin.so
+%{_qtdir}/plugins/pim6/kaddressbook/mainview/kaddressbook_sendmailplugin.so
+%{_qtdir}/plugins/pim6/kaddressbook/mainview/kaddressbook_sendvcardsplugin.so
+%{_qtdir}/plugins/pim6/kmail/mainview/kmail_antispamplugin.so
+%{_qtdir}/plugins/pim6/kmail/mainview/kmail_antivirusplugin.so
+%{_qtdir}/plugins/pim6/kmail/mainview/kmail_expertplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugincheckbeforesend/kmail_automaticaddcontactseditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugincheckbeforesend/kmail_checkbeforesendeditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugincheckbeforesend/kmail_confirmaddresseditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_autocorrectioneditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_changecaseeditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_insertemaileditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_insertshorturleditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_insertspecialcharactereditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_nonbreakingspaceeditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_quicktextplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_sharetexteditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_zoomtexteditorplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditorconverttext/kmail_markdownplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditorgrammar/kmail_grammalecteplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditorgrammar/kmail_languagetoolplugin.so
+%{_qtdir}/plugins/pim6/kmail/plugineditorinit/kmail_externalcomposereditorplugin.so
+%{_qtdir}/plugins/autogeneratetext/toolplugins/kaichat_addressbookplugin.so
+%{_qtdir}/plugins/autogeneratetext/toolplugins/kaichat_calendarplugin.so
 %{_qtdir}/plugins/pim6/kcms/kleopatra/kcm_kmail_gnupgsystem.so
 %{_qtdir}/plugins/pim6/ldapactivities/kldapactivitiesplugin.so
 %{_qtdir}/plugins/pim6/mailtransportactivities/kmailtransportactivitiesplugin.so
-%{_libdir}/qt6/plugins/pim6/messageviewer
-%{_libdir}/qt6/plugins/pim6/pimcommon
-%{_libdir}/qt6/plugins/pim6/webengineviewer
+%{_qtdir}/plugins/pim6/messageviewer
+%{_qtdir}/plugins/pim6/pimcommon
+%{_qtdir}/plugins/pim6/webengineviewer
 %{_libdir}/libakonadidatasetools.so.*
-%{_libdir}/qt6/plugins/pim6/contacteditor/editorpageplugins/cryptopageplugin.so
-%{_libdir}/qt6/plugins/pim6/kmail/mainview/kmail_akonadidatabasetoolplugin.so
+%{_qtdir}/plugins/pim6/contacteditor/editorpageplugins/cryptopageplugin.so
+%{_qtdir}/plugins/pim6/kmail/mainview/kmail_akonadidatabasetoolplugin.so
 %{_libdir}/libKPim6AutoGenerateText.so.*
 %{_qtdir}/plugins/pim6/kmail/mainview/kmail_checkfoldersizeaccount.so
 %{_qtdir}/plugins/pim6/kmail/plugineditor/kmail_aitooleditorplugin.so
