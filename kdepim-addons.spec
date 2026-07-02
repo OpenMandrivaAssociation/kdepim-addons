@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
-Version:	26.04.2
+Version:	26.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -118,6 +118,7 @@ Add-Ons for the KDE PIM suite.
 # headers...) or they become optional here.
 # No point in splitting a package if both sides are useless without
 # the other...
+%{_libdir}/libadblockplugin.so.*
 %{_libdir}/libkaddressbookmergelibprivate.so.*
 %{_libdir}/libshorturlpluginprivate.so.*
 %{_libdir}/libexpireaccounttrashfolderconfig.so.*
