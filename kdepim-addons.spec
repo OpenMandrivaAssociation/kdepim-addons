@@ -92,6 +92,10 @@ BuildRequires:	cmake(KPim6Itinerary)
 BuildRequires:	pkgconfig(poppler-qt6)
 BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	pkgconfig(libmarkdown)
+# rust adblock plugin; Corrosion is not in cooker for aarch64
+%ifnarch aarch64
+BuildRequires:	cmake(Corrosion)
+%endif
 
 %rename plasma6-kdepim-addons
 
@@ -103,7 +107,14 @@ BuildOption:	-DKDEPIMADDONS_BUILD_EXAMPLES:BOOL=true
 %description
 Add-Ons for the KDE PIM suite.
 
-%files -f %{name}.lang
+%install -a
+# rust adblock plugin is optional (needs Corrosion)
+: > extra-adblock.files
+if ls %{buildroot}%{_libdir}/libadblockplugin.so.* >/dev/null 2>&1; then
+	echo '%{_libdir}/libadblockplugin.so.*' >> extra-adblock.files
+fi
+
+%files -f %{name}.lang -f extra-adblock.files
 %{_datadir}/messageviewerplugins/externalscriptexample.desktop
 %{_datadir}/qlogging-categories6/kdepim-addons.categories
 %{_datadir}/qlogging-categories6/kdepim-addons.renamecategories
@@ -119,7 +130,7 @@ Add-Ons for the KDE PIM suite.
 # headers...) or they become optional here.
 # No point in splitting a package if both sides are useless without
 # the other...
-%{_libdir}/libadblockplugin.so.*
+# libadblockplugin is only built when Corrosion/Rust are available
 %{_libdir}/libkaddressbookmergelibprivate.so.*
 %{_libdir}/libshorturlpluginprivate.so.*
 %{_libdir}/libexpireaccounttrashfolderconfig.so.*
