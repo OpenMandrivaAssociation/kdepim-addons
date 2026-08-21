@@ -92,10 +92,8 @@ BuildRequires:	cmake(KPim6Itinerary)
 BuildRequires:	pkgconfig(poppler-qt6)
 BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	pkgconfig(libmarkdown)
-# rust adblock plugin; Corrosion is not in cooker for aarch64
-%ifnarch aarch64
-BuildRequires:	cmake(Corrosion)
-%endif
+# rust adblock plugin needs Corrosion + crates.io at build time.
+# ABF has no network, and Corrosion is missing on aarch64, so skip it.
 
 %rename plasma6-kdepim-addons
 
@@ -103,6 +101,7 @@ BuildSystem:	cmake
 BuildOption:	-DBUILD_PYTHON_BINDINGS:BOOL=OFF
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 BuildOption:	-DKDEPIMADDONS_BUILD_EXAMPLES:BOOL=true
+BuildOption:	-DCMAKE_DISABLE_FIND_PACKAGE_Corrosion:BOOL=ON
 
 %description
 Add-Ons for the KDE PIM suite.
