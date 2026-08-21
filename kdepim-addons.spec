@@ -4,7 +4,7 @@
 Summary:	Add-Ons for the KDE PIM suite
 Name:		kdepim-addons
 Version:	26.08.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://www.kde.org
@@ -19,6 +19,8 @@ Source0:	https://invent.kde.org/pim/kdepim-addons/-/archive/%{gitbranch}/kdepim-
 %else
 Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/kdepim-addons-%{version}.tar.xz
 %endif
+# cargo vendor of plugins/webengineurlinterceptor/adblock (ABF has no crates.io)
+Source1:	vendor.tar.xz
 BuildRequires:	sasl-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake(ECM)
@@ -92,8 +94,7 @@ BuildRequires:	cmake(KPim6Itinerary)
 BuildRequires:	pkgconfig(poppler-qt6)
 BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	pkgconfig(libmarkdown)
-# rust adblock plugin needs Corrosion + crates.io at build time.
-# ABF has no network, and Corrosion is missing on aarch64, so skip it.
+BuildRequires:	cmake(Corrosion)
 
 %rename plasma6-kdepim-addons
 
@@ -101,19 +102,29 @@ BuildSystem:	cmake
 BuildOption:	-DBUILD_PYTHON_BINDINGS:BOOL=OFF
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 BuildOption:	-DKDEPIMADDONS_BUILD_EXAMPLES:BOOL=true
-BuildOption:	-DCMAKE_DISABLE_FIND_PACKAGE_Corrosion:BOOL=ON
 
 %description
 Add-Ons for the KDE PIM suite.
 
-%install -a
-# rust adblock plugin is optional (needs Corrosion)
-: > extra-adblock.files
-if ls %{buildroot}%{_libdir}/libadblockplugin.so.* >/dev/null 2>&1; then
-	echo '%{_libdir}/libadblockplugin.so.*' >> extra-adblock.files
-fi
+%prep -a
+tar -C plugins/webengineurlinterceptor/adblock -xf %{SOURCE1}
+mkdir -p plugins/webengineurlinterceptor/adblock/.cargo
+cat > plugins/webengineurlinterceptor/adblock/.cargo/config.toml << EOF
+[source.crates-io]
+replace-with = "vendored-sources"
 
-%files -f %{name}.lang -f extra-adblock.files
+[source.vendored-sources]
+directory = "vendor"
+
+[net]
+offline = true
+EOF
+
+%build -p
+export CARGO_HOME=%{_builddir}/.cargo
+mkdir -p "$CARGO_HOME"
+
+%files -f %{name}.lang
 %{_datadir}/messageviewerplugins/externalscriptexample.desktop
 %{_datadir}/qlogging-categories6/kdepim-addons.categories
 %{_datadir}/qlogging-categories6/kdepim-addons.renamecategories
@@ -129,7 +140,7 @@ fi
 # headers...) or they become optional here.
 # No point in splitting a package if both sides are useless without
 # the other...
-# libadblockplugin is only built when Corrosion/Rust are available
+%{_libdir}/libadblockplugin.so.*
 %{_libdir}/libkaddressbookmergelibprivate.so.*
 %{_libdir}/libshorturlpluginprivate.so.*
 %{_libdir}/libexpireaccounttrashfolderconfig.so.*
